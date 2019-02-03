@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Items</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Created</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item:${items}">
+        <td><span th:text="${item.name}"></span></td>
+        <td><span th:text="${item.createdAt}"></span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
